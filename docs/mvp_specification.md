@@ -8,6 +8,16 @@ Create an emotionally supportive AI companion that offers personalized, friendly
 - • Memory Retention: The AI remembers simple context such as user name, preferences, and past moods.
 - • Optional Requests: The AI can respond to lightweight requests (e.g., jokes, facts, basic weather info).
 ## 🔹 Core MVP Features
+
+| Category            | Feature                                                                 |
+|---------------------|-------------------------------------------------------------------------|
+| Conversational Engine | Text chat using OpenAI API or similar LLM                              |
+| Memory              | Store name, preferences, moods, and simple history using local DB (SQLite) |
+| Personality         | Customizable AI name and preset tone styles (caring, witty, etc.)       |
+| Emotional Layer     | Daily check-in prompts and supportive/affectionate messages              |
+| Interface           | Web-based UI (React + FastAPI) or desktop app with simple GUI/CLI        |
+| Safety & Ethics     | Opt-out setting for romantic content or memory storage                   |
+
 ## 🔹 Technical Overview (Recommended)
 - • Frontend: React or simple CLI
 - • Backend: FastAPI (Python)
