@@ -18,15 +18,17 @@ ai-companion-project/
 ├── LICENSE
 ├── README.md
 └── docs/
-    ├── core_functionalities.md
-    └── mvp_specification.md
+    ├── core_functionalities.md      # High-level features and functionality
+    ├── mvp_specification.md         # MVP use cases, features, and tech stack
+    └── architecture.md              # System architecture and flow
 ```
 
 ## 📌 Getting Started
 
 1. Review `docs/core_functionalities.md` for the overall vision.
 2. See `docs/mvp_specification.md` for the first development phase.
-3. Choose your stack (e.g., FastAPI + React or Python CLI) and start building the MVP.
+3. Review `docs/architecture.md` for the technical system layout.
+4. Choose your stack (e.g., FastAPI + React or Python CLI) and start building the MVP.
 
 ## 🛣️ Roadmap
 
