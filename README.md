@@ -37,7 +37,8 @@ ai-companion-project/
 └── docs/
     ├── core_functionalities.md
     ├── mvp_specification.md
-    └── architecture.md
+    ├── architecture.md
+    └── COMMIT_CONVENTION.md
 ```
 
 ## 🔧 Setup Instructions
