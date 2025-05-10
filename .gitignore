@@ -11,6 +11,9 @@ ENV/
 .venv/
 .Python
 
+# Ignore environment variables
+.env
+
 # Flask/FastAPI-related
 instance/
 *.db

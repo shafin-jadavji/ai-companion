@@ -1,8 +1,9 @@
 fastapi
 uvicorn
-pydantic
 openai
 sqlite-utils
 python-dotenv
 httpx
 pytest
+pydantic
+pydantic-settings
