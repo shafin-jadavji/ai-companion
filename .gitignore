@@ -35,3 +35,6 @@ Thumbs.db
 *.egg
 *.egg-info/
 .eggs/
+
+# Ignore all Word documents
+*.docx
