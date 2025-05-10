@@ -32,10 +32,10 @@ ai-companion-project/
 
 ## 🛣️ Roadmap
 
-- Phase 1: Text-based chat with memory and personality
-- Phase 2: Voice interface, avatar support
-- Phase 3: Smart home/media integrations
-- Phase 4: Deep emotional intelligence + long-term memory
+- Phase 1: Text-based AI with memory and custom personality
+- Phase 2: Voice support and smart assistant features
+- Phase 3: Avatar integration and media sync
+- Phase 4: Real-time integrations (Spotify, smart home, etc.)
 
 ## ⚖️ Ethical Considerations
 
