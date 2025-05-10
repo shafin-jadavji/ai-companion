@@ -1,0 +1,37 @@
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environment
+env/
+venv/
+ENV/
+.venv/
+.Python
+
+# Flask/FastAPI-related
+instance/
+*.db
+*.sqlite3
+
+# React or frontend builds
+node_modules/
+build/
+dist/
+
+# VSCode settings
+.vscode/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Python packages
+*.egg
+*.egg-info/
+.eggs/

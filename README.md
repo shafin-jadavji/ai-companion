@@ -14,9 +14,12 @@ The AI Companion offers:
 
 ```
 ai-companion-project/
+├── .gitignore
+├── LICENSE
+├── README.md
 └── docs/
-    ├── core_functionalities.md      # High-level features and functionality
-    └── mvp_specification.md         # MVP use cases, features, and tech stack
+    ├── core_functionalities.md
+    └── mvp_specification.md
 ```
 
 ## 📌 Getting Started
@@ -38,7 +41,8 @@ The project is being built with a strong emphasis on user safety, emotional well
 
 ## 📄 License
 
-MIT License (or your preferred open-source license)
+This project is licensed under the [MIT License](LICENSE).  
+You are free to use, modify, and distribute this software with proper attribution.
 
 ---
 
