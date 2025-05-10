@@ -29,12 +29,5 @@ Create an emotionally supportive AI companion that offers personalized, friendly
 - • Goal setting, productivity coaching
 - • Smart home and media integrations (Spotify, YouTube)
 - • Multi-session memory and emotional analysis
+
 This MVP specification will serve as the foundation for the initial implementation phase, ensuring a clear and focused development path aligned with long-term goals.
-| Category | Feature |
-|---|---|
-| Conversational Engine | Text chat using OpenAI API or similar LLM |
-| Memory | Store name, preferences, moods, and simple history using local DB (SQLite) |
-| Personality | Customizable AI name and preset tone styles (caring, witty, etc.) |
-| Emotional Layer | Daily check-in prompts and supportive/affectionate messages |
-| Interface | Web-based UI (React + FastAPI) or desktop app with simple GUI/CLI |
-| Safety & Ethics | Opt-out setting for romantic content or memory storage |
