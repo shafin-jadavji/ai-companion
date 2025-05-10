@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+pydantic
+openai
+sqlite-utils
+python-dotenv
+httpx
+pytest

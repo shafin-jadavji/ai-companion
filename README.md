@@ -17,35 +17,70 @@ ai-companion-project/
 ├── .gitignore
 ├── LICENSE
 ├── README.md
+├── requirements.txt
+├── backend/
+│   ├── main.py
+│   ├── config.py
+│   ├── routes/
+│   │   └── chat.py
+│   └── services/
+│       ├── openai_service.py
+│       └── memory.py
+├── models/
+│   ├── user.py
+│   ├── chat.py
+│   └── memory.py
+├── data/
+│   └── ai_companion.db
+├── frontend/
+│   └── cli.py
 └── docs/
-    ├── core_functionalities.md      # High-level features and functionality
-    ├── mvp_specification.md         # MVP use cases, features, and tech stack
-    └── architecture.md              # System architecture and flow
+    ├── core_functionalities.md
+    ├── mvp_specification.md
+    └── architecture.md
 ```
 
-## 📌 Getting Started
+## 🔧 Setup Instructions
 
-1. Review `docs/core_functionalities.md` for the overall vision.
-2. See `docs/mvp_specification.md` for the first development phase.
-3. Review `docs/architecture.md` for the technical system layout.
-4. Choose your stack (e.g., FastAPI + React or Python CLI) and start building the MVP.
+### 1. Clone or Download the Project
 
-## 🛣️ Roadmap
+```bash
+git clone https://github.com/shafin-jadavji/ai-companion.git
+cd ai-companion
+```
 
-- Phase 1: Text-based AI with memory and custom personality
-- Phase 2: Voice support and smart assistant features
-- Phase 3: Avatar integration and media sync
-- Phase 4: Real-time integrations (Spotify, smart home, etc.)
+### 2. Create and Activate a Virtual Environment
 
-## ⚖️ Ethical Considerations
+```bash
+# Create virtual environment
+python -m venv venv
 
-The project is being built with a strong emphasis on user safety, emotional well-being, and transparency. Memory is local by default, and romantic simulation features are optional.
+# Activate it
+# On Windows
+venv\Scripts\activate
+
+# On Mac/Linux
+source venv/bin/activate
+```
+
+### 3. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Run the FastAPI App
+
+```bash
+uvicorn backend.main:app --reload
+```
+
+---
+
+If you’re using VS Code, it will detect the `venv` folder.  
+Select the Python interpreter from the command palette if prompted.
 
 ## 📄 License
 
 This project is licensed under the [MIT License](LICENSE).  
 You are free to use, modify, and distribute this software with proper attribution.
-
----
-
-*Built with care to bring warmth, support, and personality into the world of AI.*
