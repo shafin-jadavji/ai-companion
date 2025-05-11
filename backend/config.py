@@ -11,7 +11,6 @@ class Settings(BaseSettings):
 
 settings = Settings()
 
-
 # Logging configuration
 import logging
 from logging.handlers import RotatingFileHandler
@@ -30,9 +29,8 @@ file_handler.setFormatter(log_formatter)
 stream_handler = logging.StreamHandler(sys.stdout)
 stream_handler.setFormatter(log_formatter)
 
-logging.basicConfig(
-    level=getattr(logging, settings.log_level.upper(), logging.INFO),
-    handlers=[file_handler, stream_handler]
-)
-
-logger = logging.getLogger("ai-companion")
+# Explicit root logger configuration (reliable)
+root_logger = logging.getLogger()
+root_logger.setLevel(getattr(logging, settings.log_level.upper(), logging.INFO))
+root_logger.addHandler(file_handler)
+root_logger.addHandler(stream_handler)

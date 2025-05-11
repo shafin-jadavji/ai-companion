@@ -4,7 +4,10 @@ from models.chat import ChatRequest, ChatResponse
 from backend.services.memory import get_conversations, save_conversation
 from models.memory import ConversationEntry
 from datetime import datetime, UTC
-from backend.config import settings, logger
+from backend.config import settings
+import logging
+
+logger = logging.getLogger(__name__)
 
 router = APIRouter()
 

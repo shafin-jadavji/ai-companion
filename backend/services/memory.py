@@ -2,7 +2,9 @@ import sqlite3
 from models.memory import ConversationEntry
 from typing import List
 from datetime import datetime, UTC
-from backend.config import logger
+import logging
+
+logger = logging.getLogger(__name__)
 
 DB_PATH = 'data/ai_companion.db'
 
