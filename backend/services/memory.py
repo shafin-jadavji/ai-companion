@@ -2,6 +2,7 @@ import sqlite3
 from models.memory import ConversationEntry
 from typing import List
 from datetime import datetime, UTC
+from backend.config import logger
 
 DB_PATH = 'data/ai_companion.db'
 
@@ -12,6 +13,7 @@ def _get_connection():
 
 def initialize_database():
     with _get_connection() as conn:
+        logger.info("Initializing conversations table if not exists")
         conn.execute('''
             CREATE TABLE IF NOT EXISTS conversations (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -26,6 +28,7 @@ def initialize_database():
 
 def save_conversation(entry: ConversationEntry):
     with _get_connection() as conn:
+        logger.info(f"Saving conversation for user: {entry.user_id}")
         conn.execute(
             '''
             INSERT INTO conversations (user_id, message, response, timestamp, mood)
@@ -37,6 +40,7 @@ def save_conversation(entry: ConversationEntry):
 
 def get_conversations(user_id: str, limit: int = 10) -> List[ConversationEntry]:
     with _get_connection() as conn:
+        logger.info(f"Fetching conversations for user: {user_id}, limit: {limit}")
         cursor = conn.execute(
             '''
             SELECT user_id, message, response, timestamp, mood
@@ -59,6 +63,4 @@ def get_conversations(user_id: str, limit: int = 10) -> List[ConversationEntry]:
         ) for row in rows
     ]
 
-# Initialize DB at import time
 initialize_database()
-
