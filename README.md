@@ -37,7 +37,23 @@ ai-companion-project/
 ├── data/
 │   └── ai_companion.db
 ├── frontend/
-│   └── cli.py
+│   ├── cli.py
+│   └── web-ui/
+│       ├── README.md
+│       ├── eslint.config.js
+│       ├── index.html
+│       ├── package-lock.json
+│       ├── package.json
+│       ├── public/
+│       │   └── vite.svg
+│       ├── src/
+│       │   ├── App.css
+│       │   ├── App.jsx
+│       │   ├── assets/
+│       │   │   └── react.svg
+│       │   ├── index.css
+│       │   └── main.jsx
+│       └── vite.config.js
 └── docs/
     ├── core_functionalities.md
     ├── mvp_specification.md
@@ -84,6 +100,17 @@ uvicorn backend.main:app --reload
 
 If you’re using VS Code, it will detect the `venv` folder.  
 Select the Python interpreter from the command palette if prompted.
+
+## 🖥️ Web UI Setup (React + Vite)
+
+```bash
+cd frontend/web-ui
+npm install
+npm run dev
+```
+
+Then open: http://localhost:5173
+
 
 ## 📄 License
 
