@@ -30,6 +30,10 @@ ai-companion-project/
 │   ├── user.py
 │   ├── chat.py
 │   └── memory.py
+├── tests/
+│   ├── test_models.py
+│   ├── test_chat.py
+│   └── test_memory.py
 ├── data/
 │   └── ai_companion.db
 ├── frontend/
