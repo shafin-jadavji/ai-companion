@@ -10,6 +10,7 @@
   font-family: Arial, sans-serif;
   background: #f9f9f9;
   overflow: hidden;
+  width: 100%;
 }
 
 .chat-box {
@@ -28,6 +29,7 @@
 
 .message.user {
   background-color: #3940d2;
+  color: #fff;
   align-self: flex-end;
   text-align: right;
 }
@@ -65,8 +67,55 @@
   background: #0056b3;
 }
 
-.error {
+.input-area button:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
+
+.banner {
   padding: 0.5rem;
-  color: red;
   text-align: center;
+  margin-top: 0.25rem;
+  border-radius: 4px;
+}
+
+.banner.error {
+  background-color: #ffe0e0;
+  color: #a10000;
+}
+
+.banner.success {
+  background-color: #e0ffe0;
+  color: #006600;
+}
+
+.banner.info {
+  background-color: #e0f0ff;
+  color: #004080;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 500px) {
+  .chat-container {
+    margin: 1rem;
+    height: calc(100vh - 3rem);
+  }
+
+  .chat-box {
+    padding: 0.75rem;
+  }
+
+  .input-area {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .input-area input,
+  .input-area button {
+    width: 100%;
+  }
+
+  .message {
+    font-size: 0.95rem;
+  }
 }

@@ -9,12 +9,21 @@ export default function ChatApp() {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
+  const [banner, setBanner] = useState({ text: "", type: "" });
+
   const chatBoxRef = useRef(null);
+  const inputRef = useRef(null);
+
+  const showMessage = (text, type = "info", timeout = 4000) => {
+    setBanner({ text, type });
+    setTimeout(() => {
+      setBanner({ text: "", type: "" });
+    }, timeout);
+  };
 
   const handleSend = async () => {
     if (!input.trim()) {
-      setError("⚠️ Please enter a message.");
+      showMessage("⚠️ Please enter a message.", "error");
       return;
     }
 
@@ -22,7 +31,6 @@ export default function ChatApp() {
     setMessages(newMessages);
     setInput("");
     setLoading(true);
-    setError("");
 
     try {
       const response = await axios.post(API_URL, {
@@ -33,7 +41,7 @@ export default function ChatApp() {
       const aiReply = response?.data?.reply || "⚠️ I didn't understand that.";
       setMessages([...newMessages, { sender: "ai", text: aiReply }]);
     } catch (err) {
-      setError("❌ Failed to reach the server.");
+      showMessage("❌ Failed to reach the server.", "error");
     } finally {
       setLoading(false);
     }
@@ -51,6 +59,10 @@ export default function ChatApp() {
     }
   }, [messages]);
 
+  useEffect(() => {
+    inputRef.current?.focus();
+  }, []);
+
   return (
     <div className="chat-container">
       <div className="chat-box" ref={chatBoxRef}>
@@ -63,15 +75,18 @@ export default function ChatApp() {
       </div>
       <div className="input-area">
         <input
+          ref={inputRef}
           type="text"
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={handleKeyDown}
           placeholder="Type your message..."
         />
-        <button onClick={handleSend}>Send</button>
+        <button onClick={handleSend} disabled={!input.trim() || loading}>
+          Send
+        </button>
       </div>
-      {error && <div className="error">{error}</div>}
+      {banner.text && <div className={`banner ${banner.type}`}>{banner.text}</div>}
     </div>
   );
 }
