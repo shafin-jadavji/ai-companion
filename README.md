@@ -49,6 +49,9 @@ ai-companion-project/
 │       ├── src/
 │       │   ├── App.css
 │       │   ├── App.jsx
+│       │   ├── components/
+│       │   │   ├── ChatApp.jsx
+│       │   │   └── ChatApp.css
 │       │   ├── assets/
 │       │   │   └── react.svg
 │       │   ├── index.css
@@ -83,6 +86,10 @@ venv\Scripts\activate
 # On Mac/Linux
 source venv/bin/activate
 ```
+---
+
+If you’re using VS Code, it will detect the `venv` folder.  
+Select the Python interpreter from the command palette if prompted.
 
 ### 3. Install Dependencies
 
@@ -96,11 +103,7 @@ pip install -r requirements.txt
 uvicorn backend.main:app --reload
 ```
 
----
-
-If you’re using VS Code, it will detect the `venv` folder.  
-Select the Python interpreter from the command palette if prompted.
-
+Ensure your backend is running at `http://127.0.0.1:8000`.
 ## 🖥️ Web UI Setup (React + Vite)
 
 ```bash
@@ -109,7 +112,7 @@ npm install
 npm run dev
 ```
 
-Then open: http://localhost:5173
+The app will start at [http://localhost:5173](http://localhost:5173) by default.
 
 
 ## 📄 License
