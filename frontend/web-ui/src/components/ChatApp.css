@@ -1,16 +1,19 @@
-/* Responsive chat UI that fits within the browser window */
+/* ChatApp.css - responsive, centered, non-expanding */
 .chat-container {
   display: flex;
   flex-direction: column;
+  width: 100%;
   max-width: 600px;
+  min-width: 320px;
   height: calc(100vh - 5rem);
   margin: 2rem auto;
+  padding: 0 1rem;
   border: 1px solid #ccc;
   border-radius: 8px;
   font-family: Arial, sans-serif;
   background: #f9f9f9;
   overflow: hidden;
-  width: 100%;
+  box-sizing: border-box;
 }
 
 .chat-box {
@@ -18,19 +21,29 @@
   padding: 1rem;
   overflow-y: auto;
   background-color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .message {
   margin: 0.5rem 0;
   padding: 0.75rem;
   border-radius: 5px;
-  max-width: 80%;
+  width: fit-content;
+  max-width: 100%;
+  box-sizing: border-box;
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 .message.user {
   background-color: #3940d2;
   color: #fff;
   align-self: flex-end;
+  max-width: 85%;
   text-align: right;
 }
 
@@ -38,10 +51,12 @@
   background-color: #d0d0d0;
   color: #000;
   align-self: flex-start;
+  max-width: 85%;
 }
 
 .input-area {
   display: flex;
+  gap: 0.5rem;
   padding: 0.5rem;
   background: #eee;
 }
@@ -54,7 +69,6 @@
 }
 
 .input-area button {
-  margin-left: 0.5rem;
   padding: 0.5rem 1rem;
   background: #007bff;
   color: white;
@@ -92,30 +106,4 @@
 .banner.info {
   background-color: #e0f0ff;
   color: #004080;
-}
-
-/* Mobile responsiveness */
-@media (max-width: 500px) {
-  .chat-container {
-    margin: 1rem;
-    height: calc(100vh - 3rem);
-  }
-
-  .chat-box {
-    padding: 0.75rem;
-  }
-
-  .input-area {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .input-area input,
-  .input-area button {
-    width: 100%;
-  }
-
-  .message {
-    font-size: 0.95rem;
-  }
 }
