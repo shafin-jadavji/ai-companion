@@ -1,5 +1,28 @@
 # AI Companion Project
 
+---
+
+## ✅ MVP Status – v1.0.0 (May 11, 2025)
+
+🎉 The AI Companion MVP is complete!
+
+This release delivers the first working version of a customizable AI assistant with:
+
+- 💬 Real-time chat powered by OpenAI
+- 🧠 Memory of prior interactions (SQLite)
+- 🎭 Warm, supportive personality tone
+- 🌐 Responsive web UI using React + FastAPI
+- 🛠️ Modular architecture for future expansion
+
+---
+
+## 💬 Live Demo Preview
+
+![Chat Interface Preview](docs/images/chat_ui_preview.png)
+
+---
+
+
 This project aims to develop an AI-powered emotional support and relationship simulation companion that users can interact with through natural conversations.
 
 ## 🚀 Project Overview

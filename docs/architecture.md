@@ -74,3 +74,6 @@ This document outlines the technical architecture for the AI Companion MVP — a
 ---
 
 *This document will evolve as the system expands beyond the MVP.*
+
+---
+📦 This document describes the architecture for MVP release v1.0.0 (May 11, 2025).
