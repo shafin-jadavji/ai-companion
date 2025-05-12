@@ -142,3 +142,13 @@ The app will start at [http://localhost:5173](http://localhost:5173) by default.
 
 This project is licensed under the [MIT License](LICENSE).  
 You are free to use, modify, and distribute this software with proper attribution.
+
+## 🛣️ Next Steps
+
+See [ROADMAP.md](ROADMAP.md) for planned features like:
+
+- 🎙️ Voice interaction support  
+- 🎭 AI name and tone customization  
+- 🧑‍🎨 Avatar and emotion syncing  
+- 🌐 Smart home and API integrations  
+- 🔒 Memory opt-in controls and data reset
