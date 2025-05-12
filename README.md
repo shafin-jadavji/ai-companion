@@ -152,3 +152,5 @@ See [ROADMAP.md](ROADMAP.md) for planned features like:
 - 🧑‍🎨 Avatar and emotion syncing  
 - 🌐 Smart home and API integrations  
 - 🔒 Memory opt-in controls and data reset
+
+📈 For a categorized overview of what's being worked on, see the [Project Board Summary](docs/project_board.md).
